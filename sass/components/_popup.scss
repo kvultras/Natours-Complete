@@ -11,6 +11,7 @@
     transition: all .3s;
 
 
+
     &__content {
         @include absCenter;
         width: 75%;
@@ -22,12 +23,34 @@
         opacity: 0;
         transform: translate(-50%, -50%) scale(.25);
         transition: all .5s .2s;
+
+        @include respond(tab-port) {
+            display: block;
+            position: relative;
+            height: 90vh;
+        }
+
+        @include respond(phone) {
+            width: 100%;
+            height: 100%;
+        }
     }
 
     &__left {
         width: 33.333333%;
         display: table-cell;
-        position: relative;
+        position: absolute;
+
+        @include respond(tab-port) {
+           display: block;
+           height: 40%;
+           width: 100%;
+           margin-bottom: 2rem;
+        }
+
+        @include respond(phone) {
+         display: none;   
+        }
     }
 
     &__right {
@@ -35,11 +58,65 @@
         display: table-cell;
         vertical-align: middle;
         padding: 3rem 5rem;
+
+        @include respond(tab-port) {
+            position: absolute;
+            display: block;
+            width: 100%;
+            bottom: 0;
+            text-align: center;
+        }
+
+        @include respond(phone) {
+            height: 100%;
+        }
     }
 
-    &__img {
+    &__img, {
         display: block;
         width: 100%;
+
+        &--img1 {
+            display: block;
+            width: 100%;
+            
+        }
+        &--img2 {
+            display: block;
+            width: 100%;
+            
+
+        }
+        
+        @include respond(tab-port) {
+            display: block;
+            float: left;
+            padding: 0;
+        
+            
+            &--img1 {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 50%;
+                height: 65%;
+                padding-top: 2rem;
+                padding-left: 2rem;
+                padding-right: 1rem;
+                
+            }
+            &--img2 {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 50%;
+                height: 65%;
+                padding-top: 2rem;
+                padding-right: 2rem;
+                padding-left: 1rem;
+                
+            }
+        }
     }
 
     &__text {
@@ -81,6 +158,11 @@
             text-decoration: none;
             display: inline-block;
             transition: all .2s;
+            
+            @include respond(tab-port) {
+                position: fixed;
+                top: 1rem;
+            }
         }
 
         &:hover {
