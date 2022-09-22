@@ -10,6 +10,7 @@
     visibility: hidden;
     transition: all .3s;
 
+
     &__content {
         @include absCenter;
         width: 75%;
@@ -22,9 +23,11 @@
         transform: translate(-50%, -50%) scale(.25);
         transition: all .5s .2s;
     }
+
     &__left {
         width: 33.333333%;
         display: table-cell;
+        position: relative;
     }
 
     &__right {
