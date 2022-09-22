@@ -1,5 +1,4 @@
 .btn {
-
   &,
   &:link,
   &:visited {
@@ -41,7 +40,6 @@
     &::after {
       background-color: $color-white;
     }
-
   }
 
   &--green {
@@ -51,7 +49,6 @@
     &::after {
       background-color: $color-primary;
     }
-
   }
 
   &::after {
